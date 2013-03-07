@@ -13,4 +13,9 @@ HOMEPAGE="http://www.gnu.org.ua/software/gdbm/"
 SRC_URI="mirror://gnu/gdbm/gdbm-${VERSION}.tar.gz"
 PATCH_URI="1.10-no-undefined.patch  1.10-parallel-make.patch"
 
-KEEP_LA_FILES="none"
+PKG_NAMES="gdbm libgdbm4 libgdbm-devel"
+gdbm_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/info/"
+libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll"
+libgdbm_devel_CONTENTS="usr/include/ usr/lib/ usr/share/man/man3/"
+
+DIFF_EXCLUDES="doc"
