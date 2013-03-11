@@ -14,7 +14,7 @@ SRC_URI="mirror://gnu/gdbm/gdbm-${VERSION}.tar.gz"
 PATCH_URI="1.10-no-undefined.patch  1.10-parallel-make.patch"
 
 PKG_NAMES="gdbm libgdbm4 libgdbm-devel"
-gdbm_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/info/"
+gdbm_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/info/ usr/share/locale/"
 libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll usr/bin/cyggdbm_compat-4.dll"
 libgdbm_devel_CONTENTS="usr/include/ usr/lib/ usr/share/man/man3/"
 
