@@ -1,6 +1,6 @@
 NAME="gdbm"
 VERSION=1.10
-RELEASE=1
+RELEASE=2
 CATEGORY="Database"
 SUMMARY="GNU dbm implementation"
 DESCRIPTION="GNU dbm is a library of database functions that use extensible
@@ -15,7 +15,9 @@ PATCH_URI="1.10-no-undefined.patch  1.10-parallel-make.patch"
 
 PKG_NAMES="gdbm libgdbm4 libgdbm-devel"
 gdbm_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/info/"
-libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll"
+libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll usr/bin/cyggdbm_compat-4.dll"
 libgdbm_devel_CONTENTS="usr/include/ usr/lib/ usr/share/man/man3/"
 
 DIFF_EXCLUDES="doc"
+
+CYGCONF_ARGS="--enable-libgdbm-compat"
