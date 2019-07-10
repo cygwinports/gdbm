@@ -1,5 +1,5 @@
 NAME="gdbm"
-VERSION=1.12
+VERSION=1.13
 RELEASE=1
 CATEGORY="Libs"
 SUMMARY="GNU dbm implementation"
@@ -12,15 +12,16 @@ sequential iteration over all key/data pairs in a database."
 HOMEPAGE="http://www.gnu.org.ua/software/gdbm/"
 SRC_URI="mirror://gnu/gdbm/gdbm-${VERSION}.tar.gz"
 PATCH_URI="
-	http://pkgs.fedoraproject.org/cgit/gdbm.git/plain/gdbm-1.10-zeroheaders.patch
+	https://src.fedoraproject.org/rpms/gdbm/raw/f27/f/gdbm-1.13-unknown-update-error.patch
 	1.10-no-undefined.patch
-	1.11-parallel-make.patch
+	1.13-parallel-make.patch
 "
 
-PKG_NAMES="gdbm libgdbm4 libgdbm-devel"
+PKG_NAMES="gdbm libgdbm4 libgdbm_compat4 libgdbm-devel"
 gdbm_CATEGORY="Database"
 gdbm_CONTENTS="usr/bin/*.exe usr/share/doc/ usr/share/info/ usr/share/locale/ usr/share/man/man1/"
-libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll usr/bin/cyggdbm_compat-4.dll"
+libgdbm4_CONTENTS="usr/bin/cyggdbm-4.dll"
+libgdbm_compat4_CONTENTS="usr/bin/cyggdbm_compat-4.dll"
 libgdbm_devel_CONTENTS="usr/include/ usr/lib/ usr/share/man/man3/"
 
 DIFF_EXCLUDES="doc"
